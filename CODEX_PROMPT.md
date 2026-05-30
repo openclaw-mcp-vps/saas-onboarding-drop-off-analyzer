@@ -11,7 +11,7 @@ NICHE: developer-tools
 PRICE: $$17/mo
 
 ARCHITECTURE SPEC:
-A Next.js SaaS application that provides a JavaScript tracking SDK for customers to embed in their onboarding flows, captures user events in a real-time database, and displays analytics dashboards showing drop-off points with actionable insights. The architecture separates the tracking service, analytics engine, and customer dashboard into distinct modules.
+A Next.js analytics dashboard that tracks user onboarding flows through JavaScript SDK integration. Users embed tracking code, define onboarding steps, and view drop-off analytics with actionable insights.
 
 PLANNED FILES:
 - app/page.tsx
@@ -21,16 +21,15 @@ PLANNED FILES:
 - app/api/projects/route.ts
 - app/api/analytics/route.ts
 - app/api/webhooks/lemonsqueezy/route.ts
-- components/tracking-sdk-setup.tsx
-- components/funnel-chart.tsx
-- components/drop-off-insights.tsx
+- components/ui/analytics-chart.tsx
+- components/ui/funnel-visualization.tsx
+- components/ui/integration-code.tsx
 - lib/tracking-sdk.js
-- lib/analytics-engine.ts
-- lib/lemonsqueezy.ts
 - lib/database.ts
+- lib/lemonsqueezy.ts
 - prisma/schema.prisma
 
-DEPENDENCIES: next, react, tailwindcss, prisma, @prisma/client, postgresql, @lemonsqueezy/lemonsqueezy.js, recharts, next-auth, @next-auth/prisma-adapter, zod, lucide-react, date-fns
+DEPENDENCIES: next, tailwindcss, prisma, @prisma/client, recharts, lucide-react, @lemonsqueezy/lemonsqueezy.js, next-auth, zod, date-fns
 
 REQUIREMENTS:
 - Next.js 15 with App Router (app/ directory)
@@ -87,7 +86,7 @@ approval: never
 sandbox: danger-full-access
 reasoning effort: xhigh
 reasoning summaries: none
-session id: 019e6fd5-260f-7613-9f44-1e29a26acec2
+session id: 019e77cb-00a2-7ed3-ad0b-afe1723cc385
 --------
 user
 # Build Task: saas-onboarding-drop-off-analyzer
